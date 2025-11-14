@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Print Assist - Your trusted partner for high-quality business cards, banners, brochures, and custom printing solutions." />
+    <title>Print Assist | Premium Printing Solutions</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .aos-animate {
+            transition-delay: 0ms !important;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            width: 100%;
+        }
+
+        /* Prevent inner sections from overflowing on mobile */
+        section,
+        div,
+        img {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-50 text-gray-800 overflow-x-hidden">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-black text-white py-2 text-xs md:text-sm">
+        <div
+            class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between items-center gap-3">
+            <div class="flex items-center gap-4">
+                <a onclick="call()" class="flex items-center gap-1 hover:text-yellow-400 transition">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884l8 4.8a1 1 0 001.118 0l8-4.8A1 1 0 0017 4H3a1 1 0 00-.997 1.884z"></path>
+                        <path d="M18 8.118l-7.555 4.53a3 3 0 01-3.89 0L2 8.118V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">
+                        </path>
+                    </svg>
+                    <span>+1-888-274-9279</span>
+                </a>
+                <a href="mailto:info@printassist.site" class="flex items-center gap-1 hover:text-red-400 transition">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 3.5L12 13 5.4 7.5H18.6z" />
+                    </svg>
+                    <span>info@printheps.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-blue-100 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <!-- <img src="https://printassist.site/logo.png" alt="Print Assist Logo" class="h-10 w-auto" /> -->
+                    <span class="font-bold text-xl text-gray-900">Printheps<span class="text-red-400">.com</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                    <li><a href="index.html" class="text-black font-semibold hover:text-blue-600 transition">Home</a>
+                    </li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="printer-services.html" class="hover:text-blue-600 transition">Printer Services</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-blue-100 border-t">
+                <ul class="px-4 py-3 space-y-2 text-gray-700 font-medium">
+                    <li><a href="index.html" class="block py-2 text-black font-semibold">Home</a></li>
+                    <li><a href="about.html" class="block py-2 hover:text-blue-600">About</a></li>
+                    <li><a href="services.html" class="block py-2 hover:text-blue-600">Services</a></li>
+                    <li><a href="printer-services.html" class="block py-2 hover:text-blue-600">Pritner Services</a></li>
+                    <li><a href="contact.html" class="block py-2 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+            <!-- Left Content -->
+            <div class="space-y-6">
+                <span class="inline-block bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full"
+                    data-aos="fade-right" data-aos-delay="100">
+                    Welcome to Print Assist
+                </span>
+                <h1 class="text-4xl sm:text-5xl font-bold leading-tight text-gray-900" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Your Printing Needs, <br class="hidden sm:block" /> <span class="text-blue-600">Simplified.</span>
+                </h1>
+                <p class="text-gray-600 max-w-md" data-aos="fade-up" data-aos-delay="300">
+                    From business cards to large banners — we deliver premium quality with expert guidance, fast
+                    turnaround, and affordable pricing.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#contact"
+                        class="bg-black text-white px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-800 transition">
+                        Get Started Now
+                    </a>
+                    <a href="#services"
+                        class="border border-gray-300 px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="relative" data-aos="fade-left" data-aos-delay="500">
+                <img src="https://images.pexels.com/photos/6621020/pexels-photo-6621020.jpeg"
+                    alt="Professional printing in action" class="w-full rounded-tl-[200px] object-cover shadow-xl" />
+                <div class="absolute -top-6 -right-6 flex space-x-2">
+                    <div class="w-20 h-20 bg-yellow-400 rounded-l-full"></div>
+                    <div class="w-20 h-20 bg-red-500 rounded-r-full"></div>
+                </div>
+                <div class="absolute bottom-8 left-6 bg-white p-4 rounded-lg shadow-lg flex items-center gap-3"
+                    data-aos="zoom-in" data-aos-delay="600">
+                    <span class="text-3xl font-bold">4.9</span>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <polygon
+                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <polygon
+                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <polygon
+                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <polygon
+                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current text-yellow-300" viewBox="0 0 20 20">
+                            <polygon
+                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
+                        </svg>
+                    </div>
+                    <span class="text-xs text-gray-500">2000+ Happy Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative" data-aos="fade-right">
+                <img src="https://images.pexels.com/photos/7289716/pexels-photo-7289716.jpeg"
+                    alt="Expert checking print quality" class="w-full rounded-tl-[180px] shadow-xl" />
+                <div class="absolute -top-8 -left-8 w-20 h-20 bg-yellow-400 rounded-tl-full"></div>
+                <div class="absolute -top-3 left-6 w-20 h-20 bg-red-500 rounded-tl-full"></div>
+            </div>
+            <div class="space-y-6" data-aos="fade-left">
+                <span class="inline-block bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold">About
+                    Us</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Your Trusted Print Partner</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    We simplify printing for businesses and individuals. With cutting-edge technology and a dedicated
+                    support team, we ensure every project — from business cards to large banners — is delivered with
+                    precision, speed, and care.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center"><svg
+                                class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 2l7 7-7 13-7-13 7-7z" />
+                            </svg></div>
+                        <span class="font-semibold">Premium Quality</span>
+                    </div>
+                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center"><svg
+                                class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M3 4a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1H3zm1 2h16v10l-4-4-4 5-4-5-4 4V6z" />
+                            </svg></div>
+                        <span class="font-semibold">All Sizes Available</span>
+                    </div>
+                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center"><svg
+                                class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M2 21h4V9H2v12zm18-11h-6a2 2 0 00-2 2v7a2 2 0 002 2h6a2 2 0 002-2v-7a2 2 0 00-2-2z" />
+                            </svg></div>
+                        <span class="font-semibold">Trusted by 2000+</span>
+                    </div>
+                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center"><svg
+                                class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h8a2 2 0 002-2V6l-6-4z" />
+                                <path d="M14 2v6h6" />
+                            </svg></div>
+                        <span class="font-semibold">Free Precision Cutting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-gray-50">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span class="inline-block bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-3">Our
+                Services</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Complete Printing Solutions</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-5" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="mx-auto w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center"><svg
+                        class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M14 10h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2m-4 8H6a2 2 0 01-2-2v-2a2 2 0 012-2h4m4 10h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2M10 20H6a2 2 0 01-2-2v-2a2 2 0 012-2h4" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6" />
+                    </svg></div>
+                <h3 class="text-xl font-bold">Business Printing</h3>
+                <p class="text-gray-600 text-sm">Cards, brochures, flyers, letterheads, invoices, and more.</p>
+                <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-5" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="mx-auto w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center"><svg
+                        class="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v18m6-9H6" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 8l2 2-2 2m-8 0l2-2-2-2" />
+                    </svg></div>
+                <h3 class="text-xl font-bold">Large Format</h3>
+                <p class="text-gray-600 text-sm">Banners, posters, signage, roll-ups, and trade show displays.</p>
+                <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-5" data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="mx-auto w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center"><svg
+                        class="w-12 h-12 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="7" y="3" width="14" height="18" rx="2" ry="2" />
+                        <line x1="7" y1="7" x2="21" y2="7" /><text x="9" y="17" fill="currentColor" font-weight="bold"
+                            font-size="7">A4</text>
+                    </svg></div>
+                <h3 class="text-xl font-bold">Custom Gifts</h3>
+                <p class="text-gray-600 text-sm">T-shirts, mugs, calendars, photo books, and promotional items.</p>
+                <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+            <div data-aos="fade-right">
+                <img src="https://images.pexels.com/photos/3831873/pexels-photo-3831873.jpeg"
+                    alt="High-speed printing machine" class="w-full rounded-lg shadow-2xl" />
+            </div>
+            <div class="space-y-6" data-aos="fade-left">
+                <span class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">Why Choose
+                    Us</span>
+                <h2 class="text-3xl sm:text-4xl font-bold">Your One-Stop Print Solution</h2>
+                <p class="text-gray-300">Expert guidance, premium materials, fast delivery, and unbeatable support — all
+                    under one roof.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Showcase -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-blue-50">
+        <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Our Recent Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_1.png" alt="Monthly Magazine"
+                    class="w-full h-40 object-cover rounded" />
+                <div class="mt-3 flex gap-2"><span
+                        class="text-xs bg-yellow-200 text-yellow-800 px-2 py-1 rounded">PRINT</span><span
+                        class="text-xs bg-red-200 text-red-700 px-2 py-1 rounded">BOOKS</span></div>
+                <h3 class="mt-2 font-semibold text-sm">Monthly Design Magazine</h3>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_4.png" alt="Packaging"
+                    class="w-full h-40 object-cover rounded" />
+                <div class="mt-3 flex gap-2"><span
+                        class="text-xs bg-green-200 text-green-700 px-2 py-1 rounded">PRODUCT</span><span
+                        class="text-xs bg-blue-200 text-blue-700 px-2 py-1 rounded">DESIGN</span></div>
+                <h3 class="mt-2 font-semibold text-sm">Premium Packaging</h3>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_3.png" alt="Canvas Print"
+                    class="w-full h-40 object-cover rounded" />
+                <div class="mt-3 flex gap-2"><span
+                        class="text-xs bg-green-200 text-green-700 px-2 py-1 rounded">PRINT</span><span
+                        class="text-xs bg-blue-200 text-blue-700 px-2 py-1 rounded">APPAREL</span></div>
+                <h3 class="mt-2 font-semibold text-sm">Canvas Shoes Print</h3>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_2.png" alt="Flyer"
+                    class="w-full h-40 object-cover rounded" />
+                <div class="mt-3 flex gap-2"><span
+                        class="text-xs bg-green-200 text-green-700 px-2 py-1 rounded">PRINT</span><span
+                        class="text-xs bg-blue-200 text-blue-700 px-2 py-1 rounded">FLYER</span></div>
+                <h3 class="mt-2 font-semibold text-sm">Square Flyer Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span
+                class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">Testimonials</span>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-3">What Clients Say</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-1 mb-4">
+                    <div class="w-6 h-6 bg-blue-600 rounded-l-full"></div>
+                    <div class="w-6 h-6 bg-green-500 rounded-r-full"></div>
+                </div>
+                <p class="font-bold text-lg">"Best Quality Ever"</p>
+                <p class="text-gray-600 mt-3">Print Assist consistently exceeds our expectations! The quality of their
+                    business cards is outstanding, and their team provided invaluable advice on design. They're our
+                    go-to for all our printing needs.</p>
+                <div class="flex items-center gap-4 mt-6">
+                    <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="Linda"
+                        class="w-12 h-12 rounded-full object-cover" />
+                    <div>
+                        <p class="font-semibold">Linda Smith</p>
+                        <p class="text-sm text-gray-500">Teacher</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-1 mb-4">
+                    <div class="w-6 h-6 bg-blue-600 rounded-l-full"></div>
+                    <div class="w-6 h-6 bg-green-500 rounded-r-full"></div>
+                </div>
+                <p class="font-bold text-lg">"Best service ever"</p>
+                <p class="text-gray-600 mt-3">We needed a large banner printed on a tight deadline for a trade show.
+                    Print Assist delivered a vibrant, high-quality banner with time to spare. Their customer service was
+                    exceptional, and they kept us informed throughout the process.</p>
+                <div class="flex items-center gap-4 mt-6">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Linda"
+                        class="w-12 h-12 rounded-full object-cover" />
+                    <div>
+                        <p class="font-semibold">Long Pitch</p>
+                        <p class="text-sm text-gray-500">Designer</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-1 mb-4">
+                    <div class="w-6 h-6 bg-blue-600 rounded-l-full"></div>
+                    <div class="w-6 h-6 bg-green-500 rounded-r-full"></div>
+                </div>
+                <p class="font-bold text-lg">"Amazing end result"</p>
+                <p class="text-gray-600 mt-3">As a small business owner, I appreciate Print Assist's personalized
+                    approach. They helped me create custom promotional items that perfectly reflected my brand. The
+                    prints were crisp and the pricing was very competitive. Highly recommend!</p>
+                <div class="flex items-center gap-4 mt-6">
+                    <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="Linda"
+                        class="w-12 h-12 rounded-full object-cover" />
+                    <div>
+                        <p class="font-semibold">Amanda Jeo</p>
+                        <p class="text-sm text-gray-500">Marketing</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="bg-black text-white py-20 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center px-4" data-aos="zoom-in">
+            <span class="inline-block bg-red-500 px-5 py-2 rounded-full font-bold mb-4">Ready to Print?</span>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Get Your Free Quote Today</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a onclick="call()"
+                    class="bg-white text-black py-3 px-8 rounded font-bold hover:bg-gray-200 transition">Call Now</a>
+                <a href="mailto:info@printassist.site"
+                    class="border border-white py-3 px-8 rounded font-bold hover:bg-white hover:text-black transition">Email
+                    Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="font-bold text-xl text-white">Printheps<span class="text-red-400">.com</span></span>
+
+                </div>
+                <p class="text-sm text-gray-400">Your trusted digital printing partner since 2020.</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Contact</h3>
+                <p class="text-sm">+91 98155 46976</p>
+                <p class="text-sm">info@printassist.site</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Quick Links</h3>
+                <ul class="text-sm space-y-1">
+                    <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="about.html" class="hover:text-gray-400">About</a></li>
+                    <li><a href="services.html" class="hover:text-gray-400">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Follow Us</h3>
+                <div class="flex gap-3">
+                    <a href="#" class="hover:text-gray-400"><svg class="w-5 h-5" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35C.593 0 0 .592 0 1.326v21.348C0 23.406.593 24 1.325 24h11.49v-9.294h-3.13v-3.62h3.13V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.763v2.313h3.59l-.467 3.62h-3.124V24h6.117C23.406 24 24 23.406 24 22.674V1.326C24 .592 23.406 0 22.675 0z" />
+                        </svg></a>
+                    <!-- Add others -->
+                </div>
+            </div>
+        </div>
+        <hr class="border-gray-800 my-8" />
+        <p class="text-center text-sm text-gray-500">© 2025 Print Assist. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function call() {
+            window.location.href = "tel:+1-888-274-9279"
+        }
+
+        window.addEventListener('resize', () => {
+            document.body.style.overflowX = 'hidden';
+        });
+        document.body.style.overflowX = 'hidden';
+    </script>
+</body>
+
+</html>
