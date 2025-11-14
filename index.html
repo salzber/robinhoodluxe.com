@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Print Assist - Your trusted partner for high-quality business cards, banners, brochures, and custom printing solutions." />
-    <title>Print Assist | Premium Printing Solutions</title>
+    <title>Robinhood Luxe - Luxury Fashion</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,455 +13,505 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
         }
 
         .aos-animate {
-            transition-delay: 0ms !important;
-        }
-
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            /* Prevent horizontal scroll */
-            width: 100%;
-        }
-
-        /* Prevent inner sections from overflowing on mobile */
-        section,
-        div,
-        img {
-            max-width: 100%;
-            overflow-x: hidden;
+            opacity: 1 !important;
         }
     </style>
 </head>
 
-<body class="bg-blue-50 text-gray-800 overflow-x-hidden">
+<body class="bg-gray-50 font-sans text-gray-900">
+<!-- Topbar -->
+<div data-aos="fade-down" data-aos-duration="800"
+  class="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
+  <button aria-label="Search" class="text-black hover:text-gray-700">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  </button>
 
-    <!-- Top Contact Bar -->
-    <div class="bg-black text-white py-2 text-xs md:text-sm">
-        <div
-            class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between items-center gap-3">
-            <div class="flex items-center gap-4">
-                <a onclick="call()" class="flex items-center gap-1 hover:text-yellow-400 transition">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884l8 4.8a1 1 0 001.118 0l8-4.8A1 1 0 0017 4H3a1 1 0 00-.997 1.884z"></path>
-                        <path d="M18 8.118l-7.555 4.53a3 3 0 01-3.89 0L2 8.118V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">
-                        </path>
-                    </svg>
-                    <span>+1-888-274-9279</span>
-                </a>
-                <a href="mailto:info@printassist.site" class="flex items-center gap-1 hover:text-red-400 transition">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 3.5L12 13 5.4 7.5H18.6z" />
-                    </svg>
-                    <span>info@printheps.com</span>
-                </a>
-            </div>
-        </div>
+  <div class="flex items-center space-x-2 cursor-default select-none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 stroke-current text-black" fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linejoin="round" stroke-linecap="round" d="M7 20h10l-1-4H8l-1 4zM10 10h4v4h-4zM12 4v6" />
+    </svg>
+    <div class="text-2xl font-serif font-bold text-black">
+      Robinhood <span class="text-sm font-normal block">Luxe</span>
     </div>
+  </div>
 
-    <!-- Navbar -->
-    <nav class="bg-blue-100 shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <!-- <img src="https://printassist.site/logo.png" alt="Print Assist Logo" class="h-10 w-auto" /> -->
-                    <span class="font-bold text-xl text-gray-900">Printheps<span class="text-red-400">.com</span></span>
-                </div>
+  <a href="our-products.html" class="bg-black text-white rounded-full px-5 py-2 font-semibold hover:bg-gray-800 transition">
+    Sale %
+  </a>
+</div>
 
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
-                    <li><a href="index.html" class="text-black font-semibold hover:text-blue-600 transition">Home</a>
-                    </li>
-                    <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
-                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
-                    <li><a href="printer-services.html" class="hover:text-blue-600 transition">Printer Services</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
-                </ul>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
+<!-- Navbar -->
+<nav data-aos="fade-down" data-aos-delay="200" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden bg-blue-100 border-t">
-                <ul class="px-4 py-3 space-y-2 text-gray-700 font-medium">
-                    <li><a href="index.html" class="block py-2 text-black font-semibold">Home</a></li>
-                    <li><a href="about.html" class="block py-2 hover:text-blue-600">About</a></li>
-                    <li><a href="services.html" class="block py-2 hover:text-blue-600">Services</a></li>
-                    <li><a href="printer-services.html" class="block py-2 hover:text-blue-600">Pritner Services</a></li>
-                    <li><a href="contact.html" class="block py-2 hover:text-blue-600">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <div class="container mx-auto px-6 flex items-center justify-between py-4 max-w-7xl">
+
+    <!-- Mobile Menu Button -->
+    <button aria-label="Menu" id="menuBtn" class="md:hidden text-black hover:text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 stroke-current" fill="none" viewBox="0 0 24 24"
+        stroke-width="2">
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-black font-medium tracking-wide text-base">
+      <li><a href="index.html" class="text-[#A1825B] font-bold">Home</a></li>
+      <li><a href="about.html" class="hover:text-gray-700">About Us</a></li>
+      <li><a href="our-products.html" class="hover:text-gray-700">Our Product</a></li>
+      <li><a href="testimonials.html" class="hover:text-gray-700">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-gray-700">Contact Us</a></li>
+    </ul>
+
+    <!-- Cart -->
+    <button aria-label="Cart" class="text-black hover:text-gray-700 relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 stroke-current" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linejoin="round" stroke-linecap="round" d="M3 3h2l1 7h11l3-7H6" />
+        <circle cx="7" cy="20" r="2" />
+        <circle cx="17" cy="20" r="2" />
+      </svg>
+      <span class="absolute -top-1 -right-1 bg-yellow-400 text-black rounded-full text-xs font-bold w-4 h-4 flex items-center justify-center">0</span>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU DROPDOWN -->
+  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+    <ul class="flex flex-col space-y-4 px-6 py-6 text-black font-medium tracking-wide">
+      <li><a href="index.html" class="text-[#A1825B] font-bold">Home</a></li>
+      <li><a href="about.html" class="hover:text-gray-700">About Us</a></li>
+      <li><a href="our-products.html" class="hover:text-gray-700">Our Product</a></li>
+      <li><a href="testimonials.html" class="hover:text-gray-700">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-gray-700">Contact Us</a></li>
+    </ul>
+  </div>
+
+</nav>
+
 
     <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+    <section class="relative bg-gradient-to-r from-[#F5F2EC] to-[#E8E2D6] overflow-hidden">
+        <div
+            class="container mx-auto px-6 md:px-12 xl:px-24 py-24 lg:py-32 max-w-7xl flex flex-col-reverse lg:flex-row items-center gap-12">
+
             <!-- Left Content -->
-            <div class="space-y-6">
-                <span class="inline-block bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full"
-                    data-aos="fade-right" data-aos-delay="100">
-                    Welcome to Print Assist
-                </span>
-                <h1 class="text-4xl sm:text-5xl font-bold leading-tight text-gray-900" data-aos="fade-up"
-                    data-aos-delay="200">
-                    Your Printing Needs, <br class="hidden sm:block" /> <span class="text-blue-600">Simplified.</span>
-                </h1>
-                <p class="text-gray-600 max-w-md" data-aos="fade-up" data-aos-delay="300">
-                    From business cards to large banners — we deliver premium quality with expert guidance, fast
-                    turnaround, and affordable pricing.
+            <div data-aos="fade-right" data-aos-duration="1200" class="lg:flex-1 text-left max-w-xl">
+                <p class="text-sm tracking-[0.25em] uppercase font-semibold text-gray-700 mb-4">
+                    Luxury Fashion • Premium Collection
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#contact"
-                        class="bg-black text-white px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-800 transition">
-                        Get Started Now
-                    </a>
-                    <a href="#services"
-                        class="border border-gray-300 px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition">
-                        Explore Services
-                    </a>
-                </div>
+
+                <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
+                    Redefine Your <span class="text-[#A1825B]">Timeless</span> Style
+                </h1>
+
+                <p class="mt-5 text-gray-700 text-lg leading-relaxed">
+                    Discover premium outfits crafted for elegance, comfort, and bold expression.
+                    Step into a world where fashion meets art.
+                </p>
+
+                <a href="our-products.html"
+                    class="mt-8 inline-block bg-[#A1825B] text-white px-10 py-4 text-lg font-semibold rounded-full shadow-md hover:bg-[#90724f] transition-all duration-300">
+                    Shop Now
+                </a>
             </div>
 
             <!-- Right Image -->
-            <div class="relative" data-aos="fade-left" data-aos-delay="500">
-                <img src="https://images.pexels.com/photos/6621020/pexels-photo-6621020.jpeg"
-                    alt="Professional printing in action" class="w-full rounded-tl-[200px] object-cover shadow-xl" />
-                <div class="absolute -top-6 -right-6 flex space-x-2">
-                    <div class="w-20 h-20 bg-yellow-400 rounded-l-full"></div>
-                    <div class="w-20 h-20 bg-red-500 rounded-r-full"></div>
+            <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200" class="lg:flex-1 relative">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-[#d6c7b3]">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+                        alt="Fashion Model" class="w-full h-[550px] object-cover object-center">
                 </div>
-                <div class="absolute bottom-8 left-6 bg-white p-4 rounded-lg shadow-lg flex items-center gap-3"
-                    data-aos="zoom-in" data-aos-delay="600">
-                    <span class="text-3xl font-bold">4.9</span>
-                    <div class="flex text-yellow-400">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                            <polygon
-                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
-                        </svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                            <polygon
-                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
-                        </svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                            <polygon
-                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
-                        </svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                            <polygon
-                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
-                        </svg>
-                        <svg class="w-5 h-5 fill-current text-yellow-300" viewBox="0 0 20 20">
-                            <polygon
-                                points="9.9 1.1 7.6 6.8 2 7.5 6 11.9 4.7 17.5 9.9 14.5 15.1 17.5 13.8 11.9 17.8 7.5 12.2 6.8" />
-                        </svg>
-                    </div>
-                    <span class="text-xs text-gray-500">2000+ Happy Clients</span>
-                </div>
+
+                <!-- Soft gradient overlay glow -->
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#A1825B]/20 blur-3xl rounded-full"></div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#c5b39a]/20 blur-3xl rounded-full"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About + Categories -->
+    <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div data-aos="fade-up" data-aos-duration="800" class="flex flex-col justify-center max-w-xl">
+            <p class="uppercase text-sm tracking-widest text-gray-600 mb-3">Luxury fashion made accessible</p>
+            <h2 class="text-4xl font-extrabold leading-tight mb-6">Luxury That Speaks Your Style</h2>
+            <p class="text-gray-700 mb-8">
+                At <strong>Robinhood Luxe</strong>, we believe style is more than just clothing — it’s identity. Explore
+                curated collections for men, women, and kids.
+            </p>
+            <a href="about.html"
+                class="px-6 py-2 w-max border border-black rounded-full font-semibold hover:bg-gray-50 transition">About
+                Us</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <!-- Category Cards -->
+            <div data-aos="zoom-in" data-aos-delay="100"
+                class="border rounded-xl p-8 shadow-sm hover:shadow-md transition bg-white text-center">
+                <svg class="w-16 h-16 mx-auto mb-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M6 20h12m-8-4h4m-8-8h8l2 10H6l2-10z" />
+                </svg>
+                <h3 class="text-lg font-semibold mb-2">Dresses</h3>
+                <p class="text-gray-500 text-sm">Elegant & effortless</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200"
+                class="border rounded-xl p-8 shadow-sm hover:shadow-md transition bg-white text-center">
+                <svg class="w-16 h-16 mx-auto mb-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M4 7h16M4 7l4 10h8l4-10M9 12h6" />
+                </svg>
+                <h3 class="text-lg font-semibold mb-2">Clothes</h3>
+                <p class="text-gray-500 text-sm">Stylish essentials</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300"
+                class="border rounded-xl p-8 shadow-sm hover:shadow-md transition bg-white text-center">
+                <svg class="w-16 h-16 mx-auto mb-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M16 9a4 4 0 01-8 0M6 13a6 6 0 0112 0v1a3 3 0 01-6 0v-1" />
+                </svg>
+                <h3 class="text-lg font-semibold mb-2">Accessories</h3>
+                <p class="text-gray-500 text-sm">Standout pieces</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="400"
+                class="border rounded-xl p-8 shadow-sm hover:shadow-md transition bg-white text-center">
+                <svg class="w-16 h-16 mx-auto mb-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M18 14v2a2 2 0 01-2 2H8l-3-3V7a2 2 0 012-2h7m1 0h2v5" />
+                </svg>
+                <h3 class="text-lg font-semibold mb-2">Shoes</h3>
+                <p class="text-gray-500 text-sm">Comfort meets fashion</p>
             </div>
         </div>
     </section>
 
+    <!-- Image + Mission -->
+    <section class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
 
-    <!-- About Section -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-white">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="relative" data-aos="fade-right">
-                <img src="https://images.pexels.com/photos/7289716/pexels-photo-7289716.jpeg"
-                    alt="Expert checking print quality" class="w-full rounded-tl-[180px] shadow-xl" />
-                <div class="absolute -top-8 -left-8 w-20 h-20 bg-yellow-400 rounded-tl-full"></div>
-                <div class="absolute -top-3 left-6 w-20 h-20 bg-red-500 rounded-tl-full"></div>
+            <!-- Left Image -->
+            <div data-aos="fade-right" data-aos-duration="900" class="relative">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80"
+                        alt="Luxury Clothes" class="w-full h-[420px] md:h-[500px] object-cover object-center" />
+                </div>
+
+                <!-- soft glow -->
+                <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-[#A1825B]/20 blur-2xl rounded-full"></div>
             </div>
-            <div class="space-y-6" data-aos="fade-left">
-                <span class="inline-block bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold">About
-                    Us</span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Your Trusted Print Partner</h2>
-                <p class="text-gray-600 leading-relaxed">
-                    We simplify printing for businesses and individuals. With cutting-edge technology and a dedicated
-                    support team, we ensure every project — from business cards to large banners — is delivered with
-                    precision, speed, and care.
+
+            <!-- Right Content -->
+            <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="200"
+                class="flex flex-col justify-center max-w-xl">
+
+                <p class="uppercase text-sm tracking-widest text-gray-600 mb-3">
+                    Who We Are
                 </p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center"><svg
-                                class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 2l7 7-7 13-7-13 7-7z" />
-                            </svg></div>
-                        <span class="font-semibold">Premium Quality</span>
-                    </div>
-                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center"><svg
-                                class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M3 4a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1H3zm1 2h16v10l-4-4-4 5-4-5-4 4V6z" />
-                            </svg></div>
-                        <span class="font-semibold">All Sizes Available</span>
-                    </div>
-                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center"><svg
-                                class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M2 21h4V9H2v12zm18-11h-6a2 2 0 00-2 2v7a2 2 0 002 2h6a2 2 0 002-2v-7a2 2 0 00-2-2z" />
-                            </svg></div>
-                        <span class="font-semibold">Trusted by 2000+</span>
-                    </div>
-                    <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center"><svg
-                                class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h8a2 2 0 002-2V6l-6-4z" />
-                                <path d="M14 2v6h6" />
-                            </svg></div>
-                        <span class="font-semibold">Free Precision Cutting</span>
-                    </div>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Bringing Luxury to Everyday Style
+                </h2>
+
+                <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                    We craft bold, elegant, and comfortable fashion essentials — created for those who express
+                    confidence and individuality every day.
+                    Luxury doesn’t need to be complicated. It needs to feel good.
+                </p>
+
+                <!-- Bottom Image -->
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg" alt="Fashion Model"
+                        class="w-full h-[300px] object-cover object-center" />
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-gray-50">
-        <div class="text-center mb-12" data-aos="fade-up">
-            <span class="inline-block bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-3">Our
-                Services</span>
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Complete Printing Solutions</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-5" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="mx-auto w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center"><svg
-                        class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M14 10h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2m-4 8H6a2 2 0 01-2-2v-2a2 2 0 012-2h4m4 10h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2M10 20H6a2 2 0 01-2-2v-2a2 2 0 012-2h4" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6" />
-                    </svg></div>
-                <h3 class="text-xl font-bold">Business Printing</h3>
-                <p class="text-gray-600 text-sm">Cards, brochures, flyers, letterheads, invoices, and more.</p>
-                <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-5" data-aos="fade-up"
-                data-aos-delay="200">
-                <div class="mx-auto w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center"><svg
-                        class="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v18m6-9H6" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 8l2 2-2 2m-8 0l2-2-2-2" />
-                    </svg></div>
-                <h3 class="text-xl font-bold">Large Format</h3>
-                <p class="text-gray-600 text-sm">Banners, posters, signage, roll-ups, and trade show displays.</p>
-                <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-5" data-aos="fade-up"
-                data-aos-delay="300">
-                <div class="mx-auto w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center"><svg
-                        class="w-12 h-12 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <rect x="7" y="3" width="14" height="18" rx="2" ry="2" />
-                        <line x1="7" y1="7" x2="21" y2="7" /><text x="9" y="17" fill="currentColor" font-weight="bold"
-                            font-size="7">A4</text>
-                    </svg></div>
-                <h3 class="text-xl font-bold">Custom Gifts</h3>
-                <p class="text-gray-600 text-sm">T-shirts, mugs, calendars, photo books, and promotional items.</p>
-                <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
-    <section class="bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-            <div data-aos="fade-right">
-                <img src="https://images.pexels.com/photos/3831873/pexels-photo-3831873.jpeg"
-                    alt="High-speed printing machine" class="w-full rounded-lg shadow-2xl" />
+    <section data-aos="fade-up" class="bg-gray-50 py-20 px-6 text-center">
+        <p class="text-sm font-semibold text-gray-600 tracking-widest mb-4">WHAT WE DO</p>
+        <h2 class="max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Discover our exquisite collection of fashion delights, carefully selected to create unique
+            <span class="text-[#A1825B]">looks</span>
+        </h2>
+        <a href="our-products.html"
+            class="mt-10 inline-block px-8 py-3 border border-black rounded-full font-medium hover:bg-gray-100 transition">Define
+            Your Look</a>
+    </section>
+
+
+    <!-- Products Grid -->
+    <section class="bg-gray-50 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-10">
+
+            <!-- 1. Black Button Down -->
+            <div data-aos="flip-left" data-aos-delay="100"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSvBVtYBvYKMN7M5Rr7w77gCOLnaw9KuLEvTA7MhOl_RkcSNvCkumw6PCv1lqmZDfWZzSEStaIPfsZtXEWAbJW3mPYgACvg-Eum7XvmhQz9"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Black button down</h3>
+                <p class="text-gray-600 mb-3">$99.00</p>
+                <p class="text-yellow-500 text-sm">★★★★☆</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
             </div>
-            <div class="space-y-6" data-aos="fade-left">
-                <span class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">Why Choose
-                    Us</span>
-                <h2 class="text-3xl sm:text-4xl font-bold">Your One-Stop Print Solution</h2>
-                <p class="text-gray-300">Expert guidance, premium materials, fast delivery, and unbeatable support — all
-                    under one roof.</p>
+
+            <!-- 2. Elegant Purse -->
+            <div data-aos="flip-left" data-aos-delay="200"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQZSj8YVra4VJ1lC7onDieogOYXcfsWre-H5Uon2CXMdGcxLZiGgOsGkcPwH9_0EDpY4U1G89DK3pmodxWiHuQEKDKtPYtKy07HLn9Goc5s"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Elegant purse</h3>
+                <p class="text-gray-600 mb-3">$49.00</p>
+                <p class="text-yellow-500 text-sm">★★★★★</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
             </div>
+
+            <!-- 3. Floral Dress -->
+            <div data-aos="flip-left" data-aos-delay="300"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQeT6AXJ1EE2hwsJdkpQtSh2Q7JSHvr50NbJAjOtNH0ZSrI6-jbBSfh8F9DZl2-tFrnz6OZdMcd-qobdKZKTLz024ER5tIJo-wsD_5trgwG"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Floral dress</h3>
+                <p class="text-gray-600 mb-3">$79.00</p>
+                <p class="text-yellow-500 text-sm">★★★★☆</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
+            </div>
+
+            <!-- 4. Snake Print Sneakers -->
+            <div data-aos="flip-left" data-aos-delay="400"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwYrZACuRBH9E0lNRMip0VZStOAHtv-NfEJiOQKmMd1CEIMCEU1dGGRsJZSUf5St9FZPzCDBz7lagP2tHls4GlNeBJ742uOQrGd3nieCpzGEI-1WtSGs2N"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Snake print sneakers</h3>
+                <p class="text-gray-600 mb-3">$179.00</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
+            </div>
+
+            <!-- 5. Pink Sweater -->
+            <div data-aos="flip-left" data-aos-delay="500"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSKD8uczxPPdgaLUvcyL9qX76DM_CIcNEsfu6lXBmDQ6ymyODFLk6iQDZ-FhqKuW0IlYB3MTOXB9E7Stmgq1c5Se_7IW-Y6Xsx5UYKAkoI3ciQ1hEJWUfUn"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Pink sweater</h3>
+                <p class="text-gray-600 mb-3">$28.00</p>
+                <p class="text-yellow-500 text-sm">★★★★☆</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
+            </div>
+
+            <!-- 6. Running Sneakers -->
+            <div data-aos="flip-left" data-aos-delay="600"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQoy9y-hT9L1JBzPeMB_EoQT9u9BM9oBgSuLpAkYSIsfQZrSd85M0EE29it-drUJqGGoRF7lQwXCaMsIYnBPj-XobAAqh-fu6_AIsCXNRABa_zWlNtTMBxBZA"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Running sneakers</h3>
+                <p class="text-gray-600 mb-3">$45.00</p>
+                <p class="text-yellow-500 text-sm">★★★★★</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
+            </div>
+
+            <!-- 7. Striped Sweater -->
+            <div data-aos="flip-left" data-aos-delay="700"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ4S2_nqEltepwyS0oK8yj1Qo1XCSPdGo-SFhlulfv2iS8hedVJRg6lVOG4W4lmFiIcHnT73y5QamrUPGk6oxsRJQvr2nqyxeKk294EsHBegQdv6sTA-fP0vw"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Striped sweater</h3>
+                <p class="text-gray-600 mb-3">$59.00</p>
+                <p class="text-yellow-500 text-sm">★★★★☆</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
+            </div>
+
+            <!-- 8. Mom Jeans -->
+            <div data-aos="flip-left" data-aos-delay="800"
+                class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center group">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrVKa2oPrABCpxGwEG2Sia9z-oy5OWEyrSTG7h4ftFpA-8PFjGKYJahG8qbHM-05f_JsIj4F3msP-4p2y5euV_QdwZyg0c9lqVI8Fys3DU"
+                    class="mb-5 w-40 mx-auto object-contain" />
+                <h3 class="text-gray-900 font-semibold mb-1">Mom jeans</h3>
+                <p class="text-gray-600 mb-3">$79.00</p>
+
+                <div
+                    class="absolute inset-0 bg-white/80 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition rounded-lg">
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">❤️</button>
+                    <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100">🛒</button>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Portfolio / Showcase -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-blue-50">
-        <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Our Recent Work</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_1.png" alt="Monthly Magazine"
-                    class="w-full h-40 object-cover rounded" />
-                <div class="mt-3 flex gap-2"><span
-                        class="text-xs bg-yellow-200 text-yellow-800 px-2 py-1 rounded">PRINT</span><span
-                        class="text-xs bg-red-200 text-red-700 px-2 py-1 rounded">BOOKS</span></div>
-                <h3 class="mt-2 font-semibold text-sm">Monthly Design Magazine</h3>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_4.png" alt="Packaging"
-                    class="w-full h-40 object-cover rounded" />
-                <div class="mt-3 flex gap-2"><span
-                        class="text-xs bg-green-200 text-green-700 px-2 py-1 rounded">PRODUCT</span><span
-                        class="text-xs bg-blue-200 text-blue-700 px-2 py-1 rounded">DESIGN</span></div>
-                <h3 class="mt-2 font-semibold text-sm">Premium Packaging</h3>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_3.png" alt="Canvas Print"
-                    class="w-full h-40 object-cover rounded" />
-                <div class="mt-3 flex gap-2"><span
-                        class="text-xs bg-green-200 text-green-700 px-2 py-1 rounded">PRINT</span><span
-                        class="text-xs bg-blue-200 text-blue-700 px-2 py-1 rounded">APPAREL</span></div>
-                <h3 class="mt-2 font-semibold text-sm">Canvas Shoes Print</h3>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="400">
-                <img src="https://printassist.site/wp-content/uploads/2025/02/Mockup_2.png" alt="Flyer"
-                    class="w-full h-40 object-cover rounded" />
-                <div class="mt-3 flex gap-2"><span
-                        class="text-xs bg-green-200 text-green-700 px-2 py-1 rounded">PRINT</span><span
-                        class="text-xs bg-blue-200 text-blue-700 px-2 py-1 rounded">FLYER</span></div>
-                <h3 class="mt-2 font-semibold text-sm">Square Flyer Design</h3>
-            </div>
+
+
+
+    <!-- Marquee -->
+    <section class="bg-black text-white py-3 overflow-hidden">
+        <div class="whitespace-nowrap animate-marquee text-xl font-semibold tracking-tight select-none space-x-12 px-6">
+            <span>Wardrobe Goals</span> ★ <span>Fashion Finds</span> ★ <span>Trendsetters</span> ★ <span>Exclusive
+                Offers</span> ★ <span>Style Inspiration</span>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="text-center mb-12" data-aos="fade-up">
-            <span
-                class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">Testimonials</span>
-            <h2 class="text-3xl sm:text-4xl font-bold mt-3">What Clients Say</h2>
+    <!-- Stats + CTA -->
+    <section class="relative mt-20">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1533681705110-90267d3ff62d?auto=format&fit=crop&w=1350&q=80"
+                alt="Curated Luxury" class="w-full h-full object-cover opacity-40" />
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-1 mb-4">
-                    <div class="w-6 h-6 bg-blue-600 rounded-l-full"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-r-full"></div>
+
+        <section data-aos="fade-up" class="bg-white py-16">
+            <div
+                class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-center space-y-10 sm:space-y-0 sm:space-x-20 text-center">
+                <div>
+                    <p class="text-5xl font-extrabold text-gray-400">68%</p>
+                    <p class="mt-2 text-gray-700 font-medium text-lg">Repeat Customers</p>
                 </div>
-                <p class="font-bold text-lg">"Best Quality Ever"</p>
-                <p class="text-gray-600 mt-3">Print Assist consistently exceeds our expectations! The quality of their
-                    business cards is outstanding, and their team provided invaluable advice on design. They're our
-                    go-to for all our printing needs.</p>
-                <div class="flex items-center gap-4 mt-6">
-                    <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="Linda"
-                        class="w-12 h-12 rounded-full object-cover" />
-                    <div>
-                        <p class="font-semibold">Linda Smith</p>
-                        <p class="text-sm text-gray-500">Teacher</p>
-                    </div>
+                <div>
+                    <p class="text-5xl font-extrabold text-gray-400">100+</p>
+                    <p class="mt-2 text-gray-700 font-medium text-lg">Products Launched</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-extrabold text-gray-400">7000+</p>
+                    <p class="mt-2 text-gray-700 font-medium text-lg">Orders Delivered</p>
                 </div>
             </div>
+        </section>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-1 mb-4">
-                    <div class="w-6 h-6 bg-blue-600 rounded-l-full"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-r-full"></div>
-                </div>
-                <p class="font-bold text-lg">"Best service ever"</p>
-                <p class="text-gray-600 mt-3">We needed a large banner printed on a tight deadline for a trade show.
-                    Print Assist delivered a vibrant, high-quality banner with time to spare. Their customer service was
-                    exceptional, and they kept us informed throughout the process.</p>
-                <div class="flex items-center gap-4 mt-6">
-                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Linda"
-                        class="w-12 h-12 rounded-full object-cover" />
-                    <div>
-                        <p class="font-semibold">Long Pitch</p>
-                        <p class="text-sm text-gray-500">Designer</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-1 mb-4">
-                    <div class="w-6 h-6 bg-blue-600 rounded-l-full"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-r-full"></div>
-                </div>
-                <p class="font-bold text-lg">"Amazing end result"</p>
-                <p class="text-gray-600 mt-3">As a small business owner, I appreciate Print Assist's personalized
-                    approach. They helped me create custom promotional items that perfectly reflected my brand. The
-                    prints were crisp and the pricing was very competitive. Highly recommend!</p>
-                <div class="flex items-center gap-4 mt-6">
-                    <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="Linda"
-                        class="w-12 h-12 rounded-full object-cover" />
-                    <div>
-                        <p class="font-semibold">Amanda Jeo</p>
-                        <p class="text-sm text-gray-500">Marketing</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section id="contact" class="bg-black text-white py-20 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center px-4" data-aos="zoom-in">
-            <span class="inline-block bg-red-500 px-5 py-2 rounded-full font-bold mb-4">Ready to Print?</span>
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Get Your Free Quote Today</h2>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a onclick="call()"
-                    class="bg-white text-black py-3 px-8 rounded font-bold hover:bg-gray-200 transition">Call Now</a>
-                <a href="mailto:info@printassist.site"
-                    class="border border-white py-3 px-8 rounded font-bold hover:bg-white hover:text-black transition">Email
-                    Us</a>
-            </div>
+        <div data-aos="zoom-in" class="relative max-w-4xl mx-auto px-6 py-28 text-center">
+            <p class="text-sm uppercase tracking-widest text-gray-700 mb-4">Latest Trends</p>
+            <h2 class="font-semibold text-4xl sm:text-5xl text-black mb-8">Curated Luxury Pieces</h2>
+            <a href="our-products.html"
+                class="bg-[#A1825B] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#84693c] transition">Shop
+                Now</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="font-bold text-xl text-white">Printheps<span class="text-red-400">.com</span></span>
-
+    <footer class="bg-gray-900 text-gray-300 px-6 py-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div data-aos="fade-up">
+                <div class="flex items-center space-x-2 mb-4">
+                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 6a4 4 0 0 1-8 0 4 4 0 0 1 8 0zM12 14v7m-7-3a7 7 0 0 1 14 0" />
+                    </svg>
+                    <h2 class="text-white font-bold text-2xl font-serif">Robinhood Luxe</h2>
                 </div>
-                <p class="text-sm text-gray-400">Your trusted digital printing partner since 2020.</p>
+                <p class="text-gray-400 max-w-xs">Discover fashion that redefines elegance.</p>
             </div>
-            <div>
-                <h3 class="font-bold mb-3">Contact</h3>
-                <p class="text-sm">+91 98155 46976</p>
-                <p class="text-sm">info@printassist.site</p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-3">Quick Links</h3>
-                <ul class="text-sm space-y-1">
-                    <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-                    <li><a href="about.html" class="hover:text-gray-400">About</a></li>
-                    <li><a href="services.html" class="hover:text-gray-400">Services</a></li>
+
+            <!-- Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h3 class="font-semibold mb-4 text-white">Company</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="our-products.html" class="hover:text-white">Shop</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="font-bold mb-3">Follow Us</h3>
-                <div class="flex gap-3">
-                    <a href="#" class="hover:text-gray-400"><svg class="w-5 h-5" fill="currentColor"
+
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h3 class="font-semibold mb-4 text-white">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h3 class="font-semibold mb-4 text-white">Contact</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center space-x-2"><svg class="h-5 w-5" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 12H8m0 0v4m0-4V8m4 8h4a4 4 0 1 1-4-4v4z" />
+                        </svg><span>info@robinhoodluxe.com</span></li>
+                    <li class="flex items-center space-x-2"><svg class="h-5 w-5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5h2l3.5 7-1.2 1.3a7 7 0 0 0 3.6 3.6l1.3-1.2 7 3.5v2a2 2 0 0 1-2 2h-2a19 19 0 0 1-13-13v-2a2 2 0 0 1 2-2z" />
+                        </svg><span>+1-888-274-9279</span></li>
+                </ul>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-gray-700"><svg class="h-5 w-5 text-white"
+                            fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M22.675 0h-21.35C.593 0 0 .592 0 1.326v21.348C0 23.406.593 24 1.325 24h11.49v-9.294h-3.13v-3.62h3.13V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.763v2.313h3.59l-.467 3.62h-3.124V24h6.117C23.406 24 24 23.406 24 22.674V1.326C24 .592 23.406 0 22.675 0z" />
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.992 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.194 2.238.194v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.992 22 12z" />
                         </svg></a>
-                    <!-- Add others -->
+                    <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-gray-700"><svg class="h-5 w-5 text-white"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg></a>
                 </div>
             </div>
         </div>
-        <hr class="border-gray-800 my-8" />
-        <p class="text-center text-sm text-gray-500">© 2025 Print Assist. All Rights Reserved.</p>
+        <hr class="border-gray-700 mt-12" />
+        <p class="text-center text-gray-500 text-xs mt-6">© 2025 robinhoodluxe.com. All rights reserved.</p>
     </footer>
+
+    <!-- Scroll to Top -->
+    <button onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll to top"
+        class="fixed bottom-6 right-6 bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 z-50">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
     <!-- Initialize AOS -->
     <script>
@@ -472,23 +520,20 @@
             duration: 800,
             easing: 'ease-out-cubic'
         });
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        function call() {
-            window.location.href = "tel:+1-888-274-9279"
-        }
-
-        window.addEventListener('resize', () => {
-            document.body.style.overflowX = 'hidden';
-        });
-        document.body.style.overflowX = 'hidden';
     </script>
+
+
+    <!-- Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("animate__fadeInDown");
+        });
+    </script>
+
 </body>
 
 </html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials | Robinhood Luxe - Luxury Fashion</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+    .star {
+      @apply w-5 h-5 fill-current text-yellow-400;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-900">
+<!-- Topbar -->
+<div data-aos="fade-down" data-aos-duration="800"
+  class="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
+  <button aria-label="Search" class="text-black hover:text-gray-700">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  </button>
+
+  <div class="flex items-center space-x-2 cursor-default select-none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 stroke-current text-black" fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linejoin="round" stroke-linecap="round" d="M7 20h10l-1-4H8l-1 4zM10 10h4v4h-4zM12 4v6" />
+    </svg>
+    <div class="text-2xl font-serif font-bold text-black">
+      Robinhood <span class="text-sm font-normal block">Luxe</span>
+    </div>
+  </div>
+
+  <a href="our-products.html" class="bg-black text-white rounded-full px-5 py-2 font-semibold hover:bg-gray-800 transition">
+    Sale %
+  </a>
+</div>
+
+
+<!-- Navbar -->
+<nav data-aos="fade-down" data-aos-delay="200" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+
+  <div class="container mx-auto px-6 flex items-center justify-between py-4 max-w-7xl">
+
+    <!-- Mobile Menu Button -->
+    <button aria-label="Menu" id="menuBtn" class="md:hidden text-black hover:text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 stroke-current" fill="none" viewBox="0 0 24 24"
+        stroke-width="2">
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-black font-medium tracking-wide text-base">
+      <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+      <li><a href="about.html" class="hover:text-gray-700">About Us</a></li>
+      <li><a href="our-products.html" class="hover:text-gray-700">Our Product</a></li>
+      <li><a href="testimonials.html" class="text-[#A1825B] font-bold">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-gray-700">Contact Us</a></li>
+    </ul>
+
+    <!-- Cart -->
+    <button aria-label="Cart" class="text-black hover:text-gray-700 relative">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 stroke-current" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linejoin="round" stroke-linecap="round" d="M3 3h2l1 7h11l3-7H6" />
+        <circle cx="7" cy="20" r="2" />
+        <circle cx="17" cy="20" r="2" />
+      </svg>
+      <span class="absolute -top-1 -right-1 bg-yellow-400 text-black rounded-full text-xs font-bold w-4 h-4 flex items-center justify-center">0</span>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU DROPDOWN -->
+  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+    <ul class="flex flex-col space-y-4 px-6 py-6 text-black font-medium tracking-wide">
+      <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+      <li><a href="about.html" class="hover:text-gray-700">About Us</a></li>
+      <li><a href="our-products.html" class="hover:text-gray-700">Our Product</a></li>
+      <li><a href="testimonials.html" class="text-[#A1825B] font-bold">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-gray-700">Contact Us</a></li>
+    </ul>
+  </div>
+
+</nav>
+
+  <!-- Hero Section: Testimonials Intro -->
+  <section data-aos="fade-up" class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <p data-aos="fade-up" data-aos-delay="100" class="text-sm uppercase tracking-widest text-gray-500 mb-3">Customer Voices</p>
+    <h1 data-aos="fade-up" data-aos-delay="200" class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+      What Our Customers Say
+    </h1>
+    <p data-aos="fade-up" data-aos-delay="300" class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      Thousands of happy customers trust <strong>Robinhood Luxe</strong> for premium fashion that fits their style, budget, and life. Here’s what they’re saying.
+    </p>
+  </section>
+
+  <!-- Testimonials Grid -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Testimonial 1 -->
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex items-center mb-4">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Sarah K." class="w-12 h-12 rounded-full object-cover mr-3" />
+          <div>
+            <h3 class="font-semibold text-gray-900">Sarah K.</h3>
+            <p class="text-sm text-gray-500">New York, USA</p>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          "The quality is unreal! I ordered a silk dress and it arrived in 3 days. Fits perfectly and looks even better in person. Will definitely shop again!"
+        </p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex items-center mb-4">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="James L." class="w-12 h-12 rounded-full object-cover mr-3" />
+          <div>
+            <h3 class="font-semibold text-gray-900">James L.</h3>
+            <p class="text-sm text-gray-500">London, UK</p>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          "Finally, a brand that gets men’s fashion right. The linen shirt is lightweight, breathable, and stylish. Free shipping was a bonus!"
+        </p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex items-center mb-4">
+          <img src="https://images.unsplash.com/photo-1580489940927-6d6b9f3c9e7b?auto=format&fit=crop&w=100&q=80" alt="Priya M." class="w-12 h-12 rounded-full object-cover mr-3" />
+          <div>
+            <h3 class="font-semibold text-gray-900">Priya M.</h3>
+            <p class="text-sm text-gray-500">Mumbai, India</p>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          "I bought accessories for my wedding and they were stunning. Customer support helped me with sizing. 10/10 experience!"
+        </p>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex items-center mb-4">
+          <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=100&q=80" alt="Alex T." class="w-12 h-12 rounded-full object-cover mr-3" />
+          <div>
+            <h3 class="font-semibold text-gray-900">Alex T.</h3>
+            <p class="text-sm text-gray-500">Toronto, Canada</p>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star text-gray-300">★</span>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          "Great quality shoes, but wish there were more color options. Still, very comfortable and well-made. Will order again."
+        </p>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div data-aos="fade-up" data-aos-delay="500" class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex items-center mb-4">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Emma R." class="w-12 h-12 rounded-full object-cover mr-3" />
+          <div>
+            <h3 class="font-semibold text-gray-900">Emma R.</h3>
+            <p class="text-sm text-gray-500">Sydney, Australia</p>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          "The kids' collection is adorable! My daughter loves her new dress. Soft fabric, perfect fit, and fast delivery. Thank you!"
+        </p>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div data-aos="fade-up" data-aos-delay="600" class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex items-center mb-4">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Michael P." class="w-12 h-12 rounded-full object-cover mr-3" />
+          <div>
+            <h3 class="font-semibold text-gray-900">Michael P.</h3>
+            <p class="text-sm text-gray-500">Berlin, Germany</p>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          "Best online shopping experience. Easy website, clear photos, and the jacket I ordered is now my favorite. Highly recommend!"
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section data-aos="fade-up" class="bg-[#F8F5F0] py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <p class="text-5xl font-extrabold text-[#A1825B]">7,000+</p>
+        <p class="mt-2 text-gray-700 font-medium text-lg">Happy Customers</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200">
+        <p class="text-5xl font-extrabold text-[#A1825B]">4.8/5</p>
+        <p class="mt-2 text-gray-700 font-medium text-lg">Average Rating</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300">
+        <p class="text-5xl font-extrabold text-[#A1825B]">98%</p>
+        <p class="mt-2 text-gray-700 font-medium text-lg">Would Recommend</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section data-aos="fade-up" class="bg-black text-white py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 data-aos="fade-up" data-aos-delay="100" class="text-3xl md:text-4xl font-bold mb-6">
+        Ready to Experience Luxury?
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        Join thousands who’ve upgraded their wardrobe with Robinhood Luxe. Shop now and see the difference.
+      </p>
+      <a href="our-products.html" data-aos="fade-up" data-aos-delay="300" class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition inline-block">
+        Shop Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 px-6 py-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div data-aos="fade-up">
+        <div class="flex items-center space-x-2 mb-4">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 6a4 4 0 0 1-8 0 4 4 0 0 1 8 0zM12 14v7m-7-3a7 7 0 0 1 14 0" />
+          </svg>
+          <h2 class="text-white font-bold text-2xl font-serif">Robinhood Luxe</h2>
+        </div>
+        <p class="text-gray-400 max-w-xs">Discover fashion that redefines elegance.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-semibold mb-4 text-white">Company</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About Us</a></li>
+          <li><a href="our-products.html" class="hover:text-white">Shop</a></li>
+        </ul>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-semibold mb-4 text-white">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 class="font-semibold mb-4 text-white">Contact</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center space-x-2">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0v4m0-4V8m4 8h4a4 4 0 1 1-4-4v4z" />
+            </svg>
+            <span>info@robinhoodluxe.com</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l3.5 7-1.2 1.3a7 7 0 0 0 3.6 3.6l1.3-1.2 7 3.5v2a2 2 0 0 1-2 2h-2a19 19 0 0 1-13-13v-2a2 2 0 0 1 2-2z" />
+            </svg>
+            <span>+1-888-274-9279</span>
+          </li>
+        </ul>
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-gray-700">
+            <svg class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.992 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.194 2.238.194v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.992 22 12z" />
+            </svg>
+          </a>
+          <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-gray-700">
+            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-gray-700 mt-12" />
+    <p class="text-center text-gray-500 text-xs mt-6">© 2025 robinhoodluxe.com. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 z-50 transition">
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+  
+<!-- Toggle Script -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("animate__fadeInDown");
+  });
+</script>
+
+
+</body>
+</html>
